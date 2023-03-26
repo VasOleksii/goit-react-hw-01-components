@@ -10,8 +10,7 @@ const getRandomHexColor = () => {
 export const Statistics = ({ title, stats }) => {
   return (
     <StatSection>
-      <h2>{title}</h2>
-
+      {title && <h2>{title}</h2>}
       <StatList>
         {stats.map(el => (
           <StatItemStyled key={el.id} bgcolor={getRandomHexColor()}>
